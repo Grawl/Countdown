@@ -4,9 +4,9 @@
 		linear,
 		left top,
 		left bottom,
-		color-stop(50%, @start),
-		color-stop(50%, @stop)); // Old Webkit
-	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@start',endColorstr='@stope',GradientType=0 )"; // Internet Explorer 6-9
+		color-stop(0%, @start),
+		color-stop(100%, @stop)); // Old Webkit
+	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@stop', GradientType=0 )"; // Internet Explorer 6-9
 	background: -webkit-linear-gradient(
 					@start,
 					@stop); // Fresh Webkit
