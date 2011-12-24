@@ -1,19 +1,27 @@
-.gradient(@start, @stop) {
+.gradient(@start, @stop, @fallback) {
+	background: @fallback; // Old browsers
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(50%, @start),
+		color-stop(50%, @stop)); // Old Webkit
+	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@start',endColorstr='@stope',GradientType=0 )"; // Internet Explorer 6-9
 	background: -webkit-linear-gradient(
 					@start,
-					@stop);
+					@stop); // Fresh Webkit
 	background: -moz-linear-gradient(
 					@start,
-					@stop);
+					@stop); // Fresh Gecko
 	background: -ms-linear-gradient(
 					@start,
-					@stop);
+					@stop); // Fresh Trident
 	background: -o-linear-gradient(
 					@start,
-					@stop);
+					@stop); // Fresh Presto
 	background: linear-gradient(
 					@start,
-					@stop);
+					@stop); // W3C
 }
 .box-shadow(@x, @y, @blur, @color) {
 	-webkit-box-shadow: @x @y @blur @color;
@@ -179,7 +187,7 @@ body {
 										font-size: 3.7em;
 										border-radius: 0.1em;
 										.box-shadow(0, 3px, 0, hsl(0, 0%, 70%));
-										.gradient(hsl(0, 0%, 85%), hsl(0, 0%, 95%));
+										.gradient(hsl(0, 0%, 85%), hsl(0, 0%, 95%), silver);
 											@size: 0.03em;
 											&:before, &:after {
 												content: '';
