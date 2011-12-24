@@ -20,13 +20,12 @@
 }
 @font-face {
 	font-family: StudioScript;
-	src: url('StudioScript.ttf');
+	src: url('library/StudioScript.ttf');
 }
 /* @group reset.css */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+//	http://meyerweb.com/eric/tools/css/reset/ 
+//	v2.0 | 20110126
+//	License: none (public domain)
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -48,7 +47,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+// HTML5 display-role reset for older browsers
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -76,8 +75,8 @@ html, body, .wrapper {
 	height: 100%;
 }
 body {
-	background: url('background/3.jpeg') center; /* тут есть фоны с номерами от 1 до пяти, попробуй */
-	background-size: 100%;
+	background: url('library/background/3.jpeg') center no-repeat green; /* тут есть фоны с номерами от 1 до пяти, попробуй */
+	background-size: 120%;
 	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	min-width: 640px;
 }
@@ -152,30 +151,35 @@ body {
 									width: 100%;
 									top: 2em;
 								}
-								span {
-									position: relative;
-									padding: 0 0.1em;
-									margin: 0 0.02em;
-									font-size: 3.7em;
-									border-radius: 0.1em;
-									box-shadow: 0 3px 0 hsl(0, 0%, 70%);
-									.gradient(hsl(0, 0%, 85%), hsl(0, 0%, 95%));
-										@size: 0.03em;
-										&:before, &:after {
-											content: '';
-											display: block;
-											position: absolute;
-											width: @size;
-											height: @size*2;
-											top: 50%;
-											background: hsl(0, 0%, 83%);
-										}
-										&:after {
-											left: -@size;
-										}
-										&:before {
-											right: -@size;
-										}
+								div {
+									display: inline-block;
+									margin: 0 0.2em;
+									span {
+										position: relative;
+										padding: 0 0.1em;
+										margin: 0 0.02em;
+	//									width: 1.2em;
+										font-size: 3.7em;
+										border-radius: 0.1em;
+										box-shadow: 0 3px 0 hsl(0, 0%, 70%);
+										.gradient(hsl(0, 0%, 85%), hsl(0, 0%, 95%));
+											@size: 0.03em;
+											&:before, &:after {
+												content: '';
+												display: block;
+												position: absolute;
+												width: @size;
+												height: @size*2;
+												top: 50%;
+												background: hsl(0, 0%, 83%);
+											}
+											&:after {
+												left: -@size;
+											}
+											&:before {
+												right: -@size;
+											}
+									}
 								}
 						}
 				}
