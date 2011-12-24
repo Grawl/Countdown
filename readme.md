@@ -9,3 +9,4 @@ Tasks:
 - Update to another special date after New Year
 - Add some social features *like Facebook, Vkontakte and Twitter buttons*
 - Change background to random in each hit
+- Add link to GitHub, smaller than a regular ribbon-link.
