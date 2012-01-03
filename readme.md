@@ -1,1 +1,1 @@
-No code in this branch. Switch to [gh-pages](https://github.com/Grawl/Countdown/blob/gh-pages/) branch to see all the code, description and commits.
+No code in this branch. Switch to [gh-pages](https://github.com/Grawl/Countdown/tree/gh-pages) branch to see all the code, description and commits.
