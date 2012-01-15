@@ -3,6 +3,9 @@
 body {
 	background-image: url('library/background/21.12.2012.jpg');
 	}
+.wrapper {
+	perspective: 800;
+}
 .countDown {
 	display: inline-block;
 	font-size: 36px;
@@ -12,12 +15,16 @@ body {
 	border-radius: 3px;
 	background-size: 100% 100%;
 	background-color: hsla(0, 0%, 65%,0.94);
+	transform: rotateX(20deg);
+	transform-origin: -100px 0;
+	@shadow-color: hsl(0,0%,95%);
 		h1 {
 			position: relative;
 			font-size: 0.6em;
 			margin: -0.5em 0 0.5em;
 			line-height: 1.2em;
 			font-family: 'Microgramma';
+			text-shadow: 0 0.05em 0 @shadow-color;
 				&:before, &:after {
 					content: "";
 					position: relative;
@@ -67,6 +74,7 @@ body {
 							letter-spacing: 0.2em;
 							font-size: 1em;
 							line-height: 0.1em;
+							text-shadow: 0 0.05em 0 @shadow-color;
 							}
 						div {
 							display: inline-block;
@@ -80,7 +88,7 @@ body {
 									min-width: 1em;
 									display: inline-block;
 									font-family: 'DSJapanCyr';
-									text-shadow: 0 0.03em 0 hsl(0,0%,95%);
+									text-shadow: 0 0.03em 0 @shadow-color;
 									}
 							}
 					}
