@@ -71,7 +71,7 @@ function GetCount() {
 				"<figcaption>" + pluralize(secs, ['секунда', 'секунды', 'секунд']) + "</figcaption>" +
 			"</figure>";
 		document.getElementById('countbox').innerHTML = out;
-		setTimeout("GetCount()", 10009999);
+		setTimeout("GetCount()", 1000);
 		split();
 	}
 }
