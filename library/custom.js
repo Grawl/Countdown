@@ -22,7 +22,7 @@ function GetCount() {
 	amount = dateFuture.getTime() - dateNow.getTime() + 5;
 	delete dateNow;
 	if (amount < 0) {
-		out = "<h2>С Новым Годом!</h2>";
+		out = "<figure><div><span>" + final + "</span></div></figure>";
 		document.getElementById('countbox').innerHTML = out;
 	} else {
 		days = 0;
@@ -47,7 +47,7 @@ function GetCount() {
 			hours = zero + hours;
 			}
 		if (mins < 10) {
-			mins = zero + mins
+			mins = zero + mins;
 			}
 		if (secs < 10) {
 			secs = zero + secs;
@@ -71,7 +71,7 @@ function GetCount() {
 				"<figcaption>" + pluralize(secs, ['секунда', 'секунды', 'секунд']) + "</figcaption>" +
 			"</figure>";
 		document.getElementById('countbox').innerHTML = out;
-		setTimeout("GetCount()", 1000);
+		setTimeout("GetCount()", 10009999);
 		split();
 	}
 }

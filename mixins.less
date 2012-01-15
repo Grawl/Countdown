@@ -1,0 +1,60 @@
+.gradient(@start, @stop, @fallback) {
+	background: @fallback; // Old browsers
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0%, @start),
+		color-stop(100%, @stop)); // Old Webkit
+	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@stop', GradientType=0 )"; // Internet Explorer 6-9
+	background: -webkit-linear-gradient(
+					@start,
+					@stop); // Fresh Webkit
+	background: -moz-linear-gradient(
+					@start,
+					@stop); // Fresh Gecko
+	background: -ms-linear-gradient(
+					@start,
+					@stop); // Fresh Trident
+	background: -o-linear-gradient(
+					@start,
+					@stop); // Fresh Presto
+	background: linear-gradient(
+					@start,
+					@stop); // W3C
+}
+.box-shadow(@x, @y, @blur, @color) {
+	-webkit-box-shadow: @x @y @blur @color;
+	-moz-box-shadow: @x @y @blur @color;
+	-ms-box-shadow: @x @y @blur @color;
+	-o-box-shadow: @x @y @blur @color;
+	box-shadow: @x @y @blur @color;
+}
+.box-shadow-double(@x, @y, @blur, @color, @xb, @yb, @blurb, @colorb) {
+	-webkit-box-shadow: @x @y @blur @color, @xb @yb @blurb @colorb;
+	-moz-box-shadow: @x @y @blur @color, @xb @yb @blurb @colorb;
+	-ms-box-shadow: @x @y @blur @color, @xb @yb @blurb @colorb;
+	-o-box-shadow: @x @y @blur @color, @xb @yb @blurb @colorb;
+	box-shadow: @x @y @blur @color,  @xb @yb @blurb @colorb;
+}
+.rotate(@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: rotate(@deg);
+	-ms-transform: rotate(@deg);
+	-o-transform: rotate(@deg);
+}
+.keyframes-pulse {
+	0%, 100%, 49% { opacity: 1; }
+	50%, 99% { opacity: 0; }
+	}
+@-webkit-keyframes pulse { .keyframes-pulse; }
+   @-moz-keyframes pulse { .keyframes-pulse; }
+	@-ms-keyframes pulse { .keyframes-pulse; }
+	 @-o-keyframes pulse { .keyframes-pulse; }
+		@keyframes pulse { .keyframes-pulse; }
+.animation(@name, @time, @type) {
+	-webkit-animation: @name @time @type;
+	-moz-animation: @name @time @type;
+	-ms-animation: @name @time @type;
+	animation: @name @time @type;
+	}

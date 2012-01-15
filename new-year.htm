@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>До Нового Года осталось немного!</title>
+	<link rel="stylesheet" href="new-year.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/noisy/1.1/jquery.noisy.min.js"></script>
+	<script type="text/javascript" src="library/jquery.lettering.js"></script>
+	<script type="text/javascript">
+		year = 2013;
+		month = 01;
+		day = 01;
+		hour = 0;
+		min = 0;
+		sec = 0;
+		final = "С Новым Годом!";
+	</script>
+	<script type="text/javascript" src="library/custom.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="countDown">
+			<h1>До Нового Года осталось:</h1>
+			<section id="countbox">
+				<!--
+				кофейный сценарий создаёт вот такую структуру элементов:
+				<figure>
+					<div>
+						<span>0</span>
+						<span>7</span>
+					</div>
+					<figcaption>дней</figcaption>
+				</figure>
+				<figure>
+					<div>
+						<span>2</span>
+						<span>3</span>
+					</div>
+					<figcaption>часа</figcaption>
+				</figure>
+				<figure>
+					<div>
+						<span>3</span>
+						<span>2</span>
+					</div>
+					<figcaption>минуты</figcaption>
+				</figure>
+				<figure>
+					<div>
+						<span>0</span>
+						<span>5</span>
+					</div>
+					<figcaption>секунд</figcaption>
+				</figure>
+				именно в этом месте страницы
+				-->
+			</section>
+		</div>
+	</div>
+	<script type="text/javascript">
+		// https://github.com/DanielRapp/Noisy
+		$('.countDown').noisy({
+			'intensity' : 1, 
+			'size' : 200, 
+			'opacity' : 0.035, 
+			'fallback' : '', 
+			'monochrome' : true
+			}).css('background-color', '#EDEBDE');
+	</script>
+	<!--[if gte IE 9]>
+	  <style type="text/css">
+		section figure span {
+		   filter: none;
+		}
+	  </style>
+	<![endif]-->
+</body>
+</html>
