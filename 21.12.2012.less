@@ -6,41 +6,28 @@ body {
 .countDown {
 	display: inline-block;
 	font-size: 36px;
-	border: 1px solid silver;
+	border: 1px solid hsl(0,0%,5%);
 	padding: 1em;
 	position: relative;
-		&:before, &:after {
-			content: '';
-			display: block;
-			background: white;
-			border: inherit;
-			width: 98%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 1%;
-			z-index: -1;
-			}
-		&:before {
-			.rotate(2deg);
-			}
-		&:after {
-			.rotate(-1deg);
-			}
+	border-radius: 3px;
+	background-size: 100% 100%;
+	background-color: hsla(0, 0%, 65%,0.94);
 		h1 {
 			position: relative;
-			font-size: 0.8em;
+			font-size: 0.6em;
 			margin: -0.5em 0 0.5em;
-			font-family: 'StudioScript';
+			line-height: 1.2em;
+			font-family: 'Microgramma';
 				&:before, &:after {
 					content: "";
 					position: relative;
+					bottom: 0.1em;
 					display: inline-block;
-					width: 30%;
+					width: 20%;
 					height: 1px;
 					vertical-align: middle;
-					@color: silver;
-					.box-shadow-double(0, 1px, 0, @color, 0, 3px, 0, @color);
+					@color: hsl(0,0%,5%);
+					box-shadow: 0 1px 0 @color, 0 3px 0 @color;
 					}
 				&:before {    
 					left: -.5em;
@@ -54,11 +41,13 @@ body {
 		section {
 			position: relative;
 			font-size: 0.6em;
-			margin: 0 0 1em;
+			margin: 0 0 1.5em;
+			animation: rotate 1s infinite;
 				figure {
 					display: inline;
 					position: relative;
-					margin: 0 .1em;
+					margin: 0 0.1em;
+					color: hsl(0,0%,5%);
 						&:last-of-type::after {
 							content: '';
 							}
@@ -67,16 +56,17 @@ body {
 							position: absolute;
 							top: -1em;
 							right: -0.3em;
-							.animation(pulse, 1s, infinite);
+							animation: pulse 1s infinite;
 							}
 						figcaption {
 							display: inline;
 							position: absolute;
 							left: 0;
 							width: 100%;
-							top: 1.6em;
-							font-family: 'StudioScript';
-							font-size: 1.5em;
+							top: 2.5em;
+							font-family: 'Microgramma';
+							letter-spacing: 0.2em;
+							font-size: 1em;
 							line-height: 0.1em;
 							}
 						div {
@@ -91,6 +81,7 @@ body {
 									min-width: 1em;
 									display: inline-block;
 									font-family: 'DSJapanCyr';
+									text-shadow: 0 0.03em 0 hsl(0,0%,95%);
 									}
 							}
 					}
