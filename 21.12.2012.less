@@ -4,7 +4,7 @@ body {
 	background-image: url('library/background/21.12.2012.jpg');
 	}
 .wrapper {
-	perspective: 300;
+	perspective: 400;
 }
 .countDown {
 	display: inline-block;
@@ -12,11 +12,15 @@ body {
 	border: 1px solid hsl(0,0%,5%);
 	padding: 1em;
 	position: relative;
-	border-radius: 3px;
+	border-radius: 4px;
 	background-size: 100% 100%;
 	background-color: hsla(0, 0%, 65%,0.94);
 	transform: rotateX(20deg);
 	transform-origin: -100px 0;
+	box-shadow:
+		0 15px 10px -10px rgba(0, 0, 0, 0.9),
+		0 1px 4px rgba(0, 0, 0, 0.7),
+		0 0 40px rgba(0, 0, 0, 0.3) inset;
 	@shadow-color: hsl(0,0%,95%);
 		h1 {
 			position: relative;
