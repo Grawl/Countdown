@@ -161,6 +161,7 @@ body > aside a:active {
 }
 article {
   display: inline-block;
+  vertical-align: middle;
 }
 article figure {
   float: left;
