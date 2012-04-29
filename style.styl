@@ -1,0 +1,36 @@
+@import 'reset.css'
+@import 'prefix-free'
+html, body, .wrapper
+	height	100%
+body
+	background-position	center
+	background-repeat	no-repeat
+	background-size	cover
+	font-family	'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+	min-width	640px
+.wrapper
+	centering()
+body > aside
+	position	absolute
+	top	10px
+	left	10px
+	a
+		box-shadow	inset 0px 1px 0px 0px #ffffff
+		background	linear-gradient(center top, #ededed 5%, #dfdfdf 100%)
+		background-color	#ededed
+		border-radius	6px
+		border	1px solid #dcdcdc
+		display	inline-block
+		color	#777777
+		font-family	arial
+		font-size	15px
+		font-weight	bold
+		padding	6px 10px
+		text-decoration	none
+		text-shadow	1px 1px 0px #ffffff
+		&:hover
+			background	linear-gradient(center top, #ededed 5%, #dfdfdf 100%)
+			background-color	#dfdfdf
+		&:active
+			position	relative
+			top	1px

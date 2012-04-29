@@ -1,0 +1,130 @@
+// #### it's compilable -prefix-free
+// © 2011 Artem Sapegin http://sapegin.ru
+// + 2011 Grawl http://grawl.ru
+// + radial-gradient and other rules with vendor prefixes added by Grawl.
+// add your fixes to My table of vendor prefixes there: http://goo.gl/3hPfR
+/* mask:
+parameter()
+	-webkit-parameter arguments
+	-moz-parameter arguments
+	-ms-parameter arguments
+	-o-parameter arguments
+	parameter arguments
+*/
+// ### Parameters
+box-sizing()
+	-webkit-box-sizing arguments
+	-moz-box-sizing arguments
+	box-sizing arguments
+text-overflow()
+	-o-text-overflow arguments
+	text-overflow arguments
+border-radius()
+	-webkit-border-radius arguments
+	border-radius arguments
+box-shadow()
+	-webkit-box-shadow arguments
+	box-shadow arguments
+transform()
+	-webkit-transform arguments
+	-moz-transform arguments
+	-ms-transform arguments
+	-o-transform arguments
+	transform arguments
+column-count()
+	-webkit-column-count arguments
+	-moz-column-count arguments
+	-ms-column-count arguments
+	-o-column-count arguments
+	column-count arguments
+column-gap()
+	-webkit-column-gap arguments
+	-moz-column-gap arguments
+	-ms-column-gap arguments
+	-o-column-gap arguments
+	column-gap arguments
+transition()
+	-webkit-transition arguments
+	-moz-transition arguments
+	-ms-transition arguments
+	-o-transition arguments
+	transition arguments
+animation()
+	-webkit-animation arguments
+	-moz-animation arguments
+	-ms-animation arguments
+	-o-animation arguments
+	animation arguments
+border-image()
+	-webkit-border-image arguments
+	-moz-border-image arguments
+	-ms-border-image arguments
+	-o-border-image arguments
+	border-image arguments
+hyphens()
+	-webkit-hyphens arguments
+	-moz-hyphens arguments
+	-ms-hyphens arguments
+	-o-hyphens arguments
+	hyphens arguments
+overflow-scrolling()
+	-webkit-overflow-scrolling arguments
+	overflow-scrolling arguments
+// ### Values
+// ## Gradients
+// https://github.com/LearnBoost/stylus/issues/245
+replace(str, a, b)
+	str = clone(str)
+	for e, i in str
+		if length(e) > 1
+			str[i] = replace(e, a, b)
+		else
+			if a == e
+				str[i] = b
+	str
+linear-gradient()
+	prop = current-property[0]
+	val = current-property[1]
+	args = unquote(join(', ', arguments))
+	add-property(prop, replace(val, '__CALL__', '-webkit-linear-gradient(%s)' % args))
+	add-property(prop, replace(val, '__CALL__', '-moz-linear-gradient(%s)' % args))
+	add-property(prop, replace(val, '__CALL__', '-ms-linear-gradient(%s)' % args))
+	add-property(prop, replace(val, '__CALL__', '-o-linear-gradient(%s)' % args))
+	g = 'linear-gradient(%s)' % args
+	g
+radial-gradient()
+	prop = current-property[0]
+	val = current-property[1]
+	args = unquote(join(', ', arguments))
+	add-property(prop, replace(val, '__CALL__', '-webkit-radial-gradient(%s)' % args))
+	add-property(prop, replace(val, '__CALL__', '-moz-radial-gradient(%s)' % args))
+	add-property(prop, replace(val, '__CALL__', '-ms-radial-gradient(%s)' % args))
+	add-property(prop, replace(val, '__CALL__', '-o-radial-gradient(%s)' % args))
+	g = 'radial-gradient(%s)' % args
+	g
+repeating-linear-gradient()
+	prop = current-property[0]
+	val = current-property[1]
+	args = unquote(join(', ', arguments))
+	add-property(prop, replace(val, '__CALL__', '-webkit-repeating-linear-gradient(%s)' % args))
+	add-property(prop, replace(val, '__CALL__', '-moz-repeating-linear-gradient(%s)' % args))
+	add-property(prop, replace(val, '__CALL__', '-ms-repeating-linear-gradient(%s)' % args))
+	add-property(prop, replace(val, '__CALL__', '-o-repeating-linear-gradient(%s)' % args))
+	g = 'repeating-linear-gradient(%s)' % args
+	g
+repeating-radial-gradient()
+	prop = current-property[0]
+	val = current-property[1]
+	args = unquote(join(', ', arguments))
+	add-property(prop, replace(val, '__CALL__', '-webkit-repeating-radial-gradient(%s)' % args))
+	add-property(prop, replace(val, '__CALL__', '-moz-repeating-radial-gradient(%s)' % args))
+	add-property(prop, replace(val, '__CALL__', '-ms-repeating-radial-gradient(%s)' % args))
+	add-property(prop, replace(val, '__CALL__', '-o-repeating-radial-gradient(%s)' % args))
+	g = 'repeating-radial-gradient(%s)' % args
+	g
+// ? I don't know how to add prefixes to canvas and calc values
+// ### Additional
+// ## Preserve '%'s in hsla() -- strange hack
+hsla()
+	'hsla(%s)' % unquote(join(', ', arguments))
+// > Stylus compilator is out of the box can add a prefixes to the rule of keyframes.

@@ -1,0 +1,21 @@
+@import 'reset.css';
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  min-width: 640px;
+}
+@media (max-device-width: 480px) {
+  body {
+    background-size: 200%;
+  }
+  .countDown {
+    zoom: 1.5;
+  }
+}
