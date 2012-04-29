@@ -1,0 +1,78 @@
+@import 'mixins'
+@import 'countdown'
+bgi = 'library/background/bridge.png'
+html
+	background	url('library/background/bridgeBlurred.jpg') center no-repeat
+	body
+		background	transparent
+.countDown
+	display	inline-block
+	font-size	36px
+	padding	1em
+	position	relative
+	p
+		font-size	0.45em
+		line-height	1.3em
+		width	image-size(bgi)[0]
+		display	inline-block
+		&:last-of-type
+			color	white
+			a
+				color	inherit
+				&:hover
+					text-shadow	0 0 10px hsl(62, 100%, 50%)
+#main
+	background	url(bgi) no-repeat center
+	width	image-size(bgi)[0]
+	height	image-size(bgi)[1]
+	margin	0.5em 0
+	box-shadow	0 2px 10px hsla(0,0%,0%,0.7)
+	outline	3px solid white
+	color	white
+	countSize = 50px
+	h1
+		position	relative
+		z-index	2
+		font-size	0.8em
+		padding-top	( ( image-size(bgi)[1] / 2 ) - countSize )
+	#countbox
+		position	relative
+		z-index	1
+		display	inline-block
+		font-size	0.6em
+		padding	countSize
+		margin	- ( countSize )
+		background	linear-gradient(top, hsla(0,0%,0%,0.7), hsla(0,0%,0%,0.9))
+		figure
+			display	inline
+			position	relative
+			margin	0 .1em
+			figcaption
+				display	inline
+				position	absolute
+				left	0
+				width	100%
+				top	2em
+			div
+				display	inline-block
+				margin	0 0.2em
+				span
+					position	relative
+					padding	0 0.1em
+					margin	0 0.02em
+					font-size	3.7em
+footer
+	position	absolute
+	bottom	10px
+	left	0
+	width	100%
+	text-align	center
+	color	white
+	span
+		&::after
+			content: '|'
+			padding-left	0.3em
+		&:last-of-type::after
+			content: ''
+	a
+		color	inherit
