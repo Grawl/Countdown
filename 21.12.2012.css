@@ -123,6 +123,7 @@ body > aside {
   position: absolute;
   top: 10px;
   left: 10px;
+  z-index: 2;
 }
 body > aside a {
   -webkit-box-shadow: inset 0px 1px 0px 0px #fff;
