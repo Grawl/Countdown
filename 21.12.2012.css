@@ -96,7 +96,97 @@
     top: 0;
   }
 }
-@import 'reset.css';
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
 html,
 body,
 .wrapper {
@@ -158,6 +248,13 @@ body > aside a:active {
   position: relative;
   top: 1px;
 }
+.wrapper {
+  display: run-in;
+}
+.countDown {
+  display: inline-block;
+  vertical-align: middle;
+}
 @media (max-device-width	 480px) {
   body {
     background-size: 200%;
@@ -170,6 +267,10 @@ body {
   background-image: url("library/background/21.12.2012.jpg");
 }
 .wrapper {
+  -webkit-perspective: 400;
+  -moz-perspective: 400;
+  -ms-perspective: 400;
+  -o-perspective: 400;
   perspective: 400;
   display: run-in;
 }
@@ -188,6 +289,10 @@ body {
   -ms-transform: rotateX(20deg);
   -o-transform: rotateX(20deg);
   transform: rotateX(20deg);
+  -webkit-transform-origin: -100px 0;
+  -moz-transform-origin: -100px 0;
+  -ms-transform-origin: -100px 0;
+  -o-transform-origin: -100px 0;
   transform-origin: -100px 0;
   -webkit-box-shadow: 0 15px 10px -10px rgba(0,0,0,0.90), 0 1px 4px rgba(0,0,0,0.70), 0 0 40px rgba(0,0,0,0.30) inset;
   box-shadow: 0 15px 10px -10px rgba(0,0,0,0.90), 0 1px 4px rgba(0,0,0,0.70), 0 0 40px rgba(0,0,0,0.30) inset;
