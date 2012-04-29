@@ -269,6 +269,13 @@ html {
 html body {
   background: transparent;
 }
+a {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
 .countDown {
   display: inline-block;
   font-size: 36px;
@@ -281,11 +288,20 @@ html body {
   width: 888px;
   display: inline-block;
 }
+.countDown p a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+.countDown p a:hover {
+  text-shadow: 0 0 10px #06f;
+}
 .countDown p:last-of-type {
   color: #fff;
 }
 .countDown p:last-of-type a {
   color: inherit;
+  border-color: #fff;
 }
 .countDown p:last-of-type a:hover {
   text-shadow: 0 0 10px #f6ff00;
@@ -358,4 +374,7 @@ footer span:last-of-type::after {
 }
 footer a {
   color: inherit;
+}
+footer a:hover {
+  text-shadow: 0 0 10px #f6ff00;
 }
