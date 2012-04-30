@@ -306,6 +306,12 @@ a {
 .countDown p:last-of-type a:hover {
   text-shadow: 0 0 10px #f6ff00;
 }
+.countDown aside {
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  width: 100px;
+}
 #main {
   background: url("library/background/bridge.png") no-repeat center;
   width: 888px;
